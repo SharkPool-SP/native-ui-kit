@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <body>
+    <h3>v-input</h3>
+    <div>
+      <v-input trim required type="text" placeholder="..."></v-input>
+    </div>
+    <h3>i-switch</h3>
+    <div>
+      <i-switch></i-switch>
+      <i-switch
+        value="1"
+        style="width: 100px; height: 30px; margin-top: 20px"
+      ></i-switch>
+    </div>
+    <h3>password-toggle</h3>
+    <div>
+      <div>
+        <v-input id="test1" type="text" placeholder="id test"></v-input>
+        <password-toggle target-id="test1"></password-toggle>
+      </div>
+      <div>
+        <v-input id="test2" type="password" placeholder="id test"></v-input>
+        <password-toggle target-id="test2"></password-toggle>
+      </div>
+      <div>
+        <input huh="wow" type="text" placeholder="checkbox layout test" />
+        <password-toggle layout="checkbox"></password-toggle>
+      </div>
+      <div>
+        <input huh="wow" type="password" placeholder="checkbox layout test" />
+        <password-toggle layout="checkbox"></password-toggle>
+      </div>
+      <div>
+        <v-input type="password" placeholder="v-input support test"></v-input>
+        <password-toggle></password-toggle>
+      </div>
+      <div>
+        <v-input type="text" placeholder="v-input support test"></v-input>
+        <password-toggle></password-toggle>
+      </div>
+    </div>
+    <h3>context-menu</h3>
+    <div>
+      <div style="background-color: red">
+        <p>
+          The page has its own set of right-click options...
+          <br /><br />
+          This element has a different set of options.
+        </p>
+        <context-menu>
+          <button>Test 1</button>
+          <button>Test 2</button>
+          <button>Test 3</button>
+        </context-menu>
+      </div>
+      <div style="background-color: blue">
+        <p>
+          This has another set of options, the menu supports multiple options.
+        </p>
+        <context-menu multiple>
+          <button>Test 4</button>
+          <button>Test 5</button>
+          <button>Test 6</button>
+        </context-menu>
+      </div>
+    </div>
+    <!-- context-menu on document -->
+    <context-menu>
+      <button>Option 1</button>
+      <button>Option 2</button>
+      <button>Option 3</button>
+    </context-menu>
+    <!-- toast-notif tests -->
+    <toast-notif from="top" delay="100">
+      <div
+        style="
+          width: 200px;
+          height: 100px;
+          border-radius: 10px;
+          padding: 10px;
+          background: gray;
+        "
+      >
+        <h3>toast-notif</h3>
+        <div>This is a 'top' toast notification.</div>
+      </div>
+    </toast-notif>
+    <toast-notif from="top-right" delay="300" y-offset="25%">
+      <div
+        style="
+          width: 500px;
+          height: 300px;
+          border-radius: 10px;
+          padding: 10px;
+          background: gray;
+        "
+      >
+        <h3>toast-notif</h3>
+        <div>This is a 'top-right' toast notification... with offsets.</div>
+      </div>
+    </toast-notif>
+    <toast-notif from="bottom" delay="500" delete-after="2000">
+      <div
+        style="
+          width: 300px;
+          height: 100px;
+          border-radius: 10px;
+          padding: 10px;
+          background: gray;
+        "
+      >
+        <h3>toast-notif</h3>
+        <div>This is a 'bottom' toast notification.</div>
+      </div>
+    </toast-notif>
+    <!-- Import components -->
+    <script src="../v-input.js"></script>
+    <script src="../i-switch.js"></script>
+    <script src="../password-toggle.js"></script>
+    <script src="../context-menu.js"></script>
+    <script src="../toast-notif.js"></script>
+  </body>
+</html>
